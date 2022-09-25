@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>solving quadratic equation value by javascript html css</title>
+	<style>
+	 body{
+	 	background-color: black;
+	     }
+		.div{
+	      	margin-top: 140px;
+	      	padding: 6px;
+		    background-color: gray;
+		    width: 500px;
+		    text-align: center;
+		    height: 250px;
+		    font-size: 30px;
+		    
+		     }
+      input{
+		   text-align: center;
+			 display: inline-block;
+			 width: 60px;
+			 border: 2px solid blue;
+				font-size: 30px;
+		      }
+    button{
+		      	background-color: #33FDFF;
+		      	font-size: 30px;
+
+		      }
+    .x1{
+
+			display: inline-block;
+			background-color: midnightblue;
+			color: white;
+		   }
+		.x2{
+			display: inline-block;
+			background-color: violet;
+		   }
+		   h1{color: green;}
+		   
+	</style>
+	
+</head>
+<body>
+<center>
+	<h1>simple quadratic equation solver by javascript</h1>
+<div class="div">
+						<!-- input field of ax2+bx+c=0 for gatting abc value--> 
+					  <input type="text" id="a" placeholder="a" >x<sup>2</sup>+
+					  <input type="text" id="b" placeholder="b" >x +
+					  <input type="text" id="c" placeholder="c" >= 0   
+					  <br><br> 
+						
+						<button onclick="myfun()" id="cal" >calculate</button>
+						<br><br>
+
+						<span class="x1" > x1=>  <span id="x1"></span> &nbsp &nbsp</span> 
+					   <span class="x2" > x2=>  <span id="x2"></span>&nbsp &nbsp</span>
+   </div>
+   </center>
+	<script>
+		         //onclick calculate gutton call myfunction
+
+		function myfun() {
+
+
+           //get input a, b and c value in intiser from
+    let a = parseInt(document.getElementById('a').value);
+		let b = parseInt(document.getElementById('b').value);
+		let c = parseInt(document.getElementById('c').value);
+            
+            //calculate x1 and x2 value by formula
+
+            	 let x1=(-b+(Math.sqrt(b*b-4*a*c)))/(2*a);
+
+          let x2=(-b-(Math.sqrt(b*b-4*a*c)))/(2*a);
+
+                //display values
+                  
+             document.getElementById('x1').innerHTML=x1; 
+
+              document.getElementById('x2').innerHTML=x2; 
+       
+         	}
+	</script>
+</body>
+</html>
